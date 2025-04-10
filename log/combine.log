@@ -40,3 +40,4 @@
 {"label":"kitob_ijarasi","level":"error","message":"Error occurred: errorHandler is not defined","stack":"ReferenceError: errorHandler is not defined\n    at getClientPayments (D:\\FULL_STACK\\3-OY\\16-DARS\\kitob_ijarasi\\filters\\client.payments.js:57:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-04-10T04:57:54.653Z"}
 {"label":"kitob_ijarasi","level":"error","message":"Unhandled Error:","timestamp":"2025-04-10T04:57:54.656Z"}
 {"label":"kitob_ijarasi","level":"error","timestamp":"2025-04-10T04:58:51.683Z"}
+{"expiredAt":"2025-04-10T04:14:35.000Z","label":"kitob_ijarasi","level":"error","message":"jwt expired","name":"TokenExpiredError","timestamp":"2025-04-10T06:35:45.117Z"}

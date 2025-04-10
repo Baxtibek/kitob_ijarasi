@@ -10,18 +10,6 @@ require('dotenv').config({
 })
 const PORT = config.get("port") || 3001
 
-// console.log(process.env.NODE_ENV);
-// console.log(process.env.secret);
-// console.log(config.get("secret"));
-
-
-// process.on("uncaughtException", (exception) => {
-//     console.log("uncaughtException:", exception.message)
-// })
-
-// process.on("unhandledRejection", (rejection) => {
-//     console.log("unhandledRejection:", rejection)
-// })
 
 const logger = require("./services/logger.service");
 const requestLogger = require('./middleware/loggers/request.logger');
