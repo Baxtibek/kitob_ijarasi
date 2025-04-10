@@ -6,6 +6,7 @@ const Status = require("../models/status.model");
 
 const getDamagedClients = async (req, res) => {
   try {
+    // Uchunchi filter
     const { start_date, end_date } = req.body;
 
     const start = new Date(start_date);

@@ -4,6 +4,7 @@ const Contracts = require("../models/contracts.model");
 
 const getRentedBooks = async (req, res) => {
   try {
+    // Birinchi filter
     const { start_date, end_date } = req.body;
 
     const rentedBooks = await Contracts.findAll({

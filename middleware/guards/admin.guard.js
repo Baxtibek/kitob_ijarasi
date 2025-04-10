@@ -5,7 +5,7 @@ module.exports = async function(req, res, next){
     try {
         //Guard yoki Police
         const authorization = req.headers.authorization
-        console.log(authorization);
+        // console.log(authorization);
         if(!authorization){
             return res
                 .status(403)
@@ -21,13 +21,13 @@ module.exports = async function(req, res, next){
                 .send({message: "Bearer yoki token berilmagan"})
         }
         
-        // Guardlarni ichida faqat accessTokendan foydalanamiz. accessTokendan ruxsat olsih uchun kerak.
+        // Guardlarni ichida faqat accessTokendan foydalanamiz. accessTokendan ruxsat olish uchun kerak.
         const decodedToken = await jwtService.verifyAccessToken(token)
         
         req.admin = decodedToken
-        console.log(decodedToken);
+        // console.log(decodedToken);
         
-        console.log(req.admin);
+        // console.log(req.admin);
         
         
         next()

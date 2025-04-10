@@ -5,7 +5,7 @@ module.exports = async function(req, res, next){
     try {
         //Guard yoki Police
         const authorization = req.headers.authorization
-        console.log(authorization);
+        // console.log(authorization);
         if(!authorization){
             return res
                 .status(403)
@@ -25,7 +25,7 @@ module.exports = async function(req, res, next){
         const decodedToken = await jwtClientService.verifyClientAccessToken(token)
         
         req.client = decodedToken
-        console.log(req.client);
+        // console.log(req.client);
         
         
         next()

@@ -8,10 +8,10 @@ const ownerSelfGuard = require("../middleware/guards/owner.self.guard")
 const router = require("express").Router()
 
 router.post("/", signUpOwner)
-router.get("/", ownerGuard, findAllOwners)
-router.get("/:id", ownerGuard,  findOwnerById)
-router.put("/:id", ownerGuard, ownerSelfGuard, updateOwnerById)
+router.get("/", adminGuard, adminSelfGuard, findAllOwners)
+router.get("/:id", ownerGuard, ownerSelfGuard, findOwnerById)
 router.put("/password", ownerGuard, ownerSelfGuard, updatePasswordOwner)
+router.put("/:id", ownerGuard, ownerSelfGuard, updateOwnerById)
 router.delete("/:id", adminGuard, adminSelfGuard, deleteOwnerById)
 
 router.post("/login", loginOwner)

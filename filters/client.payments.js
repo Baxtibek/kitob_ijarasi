@@ -8,6 +8,7 @@ const Payments = require("../models/payments.model");
 
 const getClientPayments = async (req, res) => {
     try {
+      // Beshichi filter
       const { client_id } = req.body;
   
       const payments = await Payments.findAll({

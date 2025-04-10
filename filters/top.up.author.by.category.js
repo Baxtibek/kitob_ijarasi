@@ -5,6 +5,8 @@ const Categories = require("../models/categories.model");
 
 const getTopAuthorsByCategory = async (req, res) => {
   try {
+
+    // Tortinchi filter
     const { categoryName } = req.body;
 
     const topAuthors = await Contracts.findAll({

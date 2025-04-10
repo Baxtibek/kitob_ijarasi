@@ -6,6 +6,7 @@ const Contracts = require("../models/contracts.model");
 
 const getCancelledClients = async (req, res) => {
   try {
+    // Ikkinchi filter
     const { start_date, end_date } = req.body;
 
     // Sanani tekshiramiz

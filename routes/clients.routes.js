@@ -15,8 +15,8 @@ router.get("/clientpay", getClientPayments)
 
 router.post("/", signUpClient)
 router.get("/", adminGuard,   findAllClients)
-router.put("/password", clientGuard, updatePasswordClient)
-router.get("/:id", clientGuard,  findClientById)
+router.get("/:id", clientGuard, clientSelfGuard, findClientById)
+router.put("/password", clientGuard, clientSelfGuard, updatePasswordClient)
 router.put("/:id", clientGuard, clientSelfGuard, updateClientById)
 router.delete("/:id", clientGuard,clientSelfGuard, deleteClientById)
 
